@@ -12,7 +12,7 @@ function solveEquation(a, b, c) {
 
   else if(d === 0) {
       return [-b / (2 * a)];
-  } else (d > 0) {
+  } else if (d > 0) {
       return [(-b + Math.sqrt(d)) / (2 * a), (-b - Math.sqrt(d)) / (2 * a)];
   }
 }
