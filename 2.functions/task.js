@@ -97,9 +97,13 @@ for (let i = 0; i < arr.length; i++){
 
 }
 
-function makeWork (arrOfArr,func,...arr) {
+function makeWork (arrOfArr,func) {
 
-let maxWorkerResult = arrOfArr[0];
-
-for (i = 0; i < arrOfArr.length; i++) {
+  let maxWorkerResult = arrOfArr[0][0];
+  let arr = [];
+  for (let i = 0; i < arrOfArr.length; i++) {
+    arr[i] = func(...arrOfArr[i]);
+    maxWorkerResult = Math.max(arr[i], maxWorkerResult);
+  }
+  return maxWorkerResult;
 }
